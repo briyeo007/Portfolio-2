@@ -2,141 +2,167 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>SkillBridge – Landing</title>
-
-  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/styles.css"/>
 </head>
 <body>
   <div class="container">
     <!-- Header -->
-    <header>
-      <nav class="nav">
-        <a href="#" class="site-title">SkillBridge</a>
-        <ul>
-          <li><a href="#">How it works</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Team</a></li>
+    <header class="landing-header">
+      <a href="/" class="site-title">
+        <img src="./image/Logo.png" alt="SkillBridge"/>
+        <span class="site-title-text">SkillBridge</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <button class="nav-mobile" id="navToggle" aria-label="Open menu">
+          <span class="nav-mobile-icon" id="navIcon"></span>
+          <span class="nav-mobile-icon"></span>
+          <span class="nav-mobile-icon"></span>
+        </button>
+        <ul class="nav-list" id="navList">
+          <li><a class="landing-title" href="/HowItWorks">How it works</a></li>
+          <li><a class="landing-title" href="/Testimonials">Testimonials</a></li>
+          <li><a class="landing-title" href="/team">Team</a></li>
           <li>
-            <button class="btnRes-signup">
-              <a href="#"><b>Sign Up</b></a>
-            </button>
+            <a href="/SignIn" class="btnRes-signup">Sign Up</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <!-- Hero -->
-    <section class="first">
-      <h1>Empower your employees to grow</h1>
-      <p>
-        Our web app empowers employees to enhance their skills, knowledge, and professional growth.
-        It delivers a personalized and accessible learning experience for individuals in any organization.
-      </p>
-      <button class="btnRes">
-        <a href="#"><b>Get started now!</b></a>
-      </button>
-    </section>
-
-    <div class="image">
-      <img src="./image/image.png" alt="SkillBridge" />
-    </div>
-
-    <!-- How it works -->
-    <section class="second">
-      <h2>How it works?</h2>
-      <p>
-        Employees access an intuitive dashboard with progress tracking, recommended courses, and upcoming activities.
-      </p>
-
-      <div class="cards">
-        <article class="card">
-          <img src="./image/training.svg" alt="Training" width="56" height="56"/>
-          <h3>Set goals for your employees</h3>
-          <p>Sed vel sem id dui rutrum porta. Morbi nec sapien sed dolor.</p>
-        </article>
-
-        <article class="card">
-          <img src="./image/Group.png" alt="Create courses" width="56" height="56"/>
-          <h3>Create your courses</h3>
-          <p>Sed vel sem id dui rutrum porta. Morbi nec sapien sed dolor.</p>
-        </article>
-
-        <article class="card">
-          <img src="./image/Growth.svg" alt="Measure growth" width="56" height="56"/>
-          <h3>Measure their growth</h3>
-          <p>Sed vel sem id dui rutrum porta. Morbi nec sapien sed dolor.</p>
-        </article>
+    <section class="section" id="hero">
+      <div class="first">
+        <div class="hero-copy">
+          <h1>Empower your<br/>employees to grow</h1>
+          <p>
+            Our web app is designed to empower employees by providing a comprehensive platform to enhance skills,
+            knowledge, and overall professional development.
+          </p>
+          <div>
+            <button class="btnRes-first">Get started now!</button>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="./image/image.png" alt="SkillBridge" class="hero-image"/>
+        </div>
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section>
-      <h2>See what other startups are telling about us</h2>
-      <p>Maecenas vitae congue sapien. Sed vel sem id dui rutrum porta. Praesent eget dapibus lorem.</p>
+    <!-- How it works -->
+    <section class="section" id="how-it-works">
+      <div class="section-head">
+        <h2>How it works?</h2>
+        <p>A user-friendly dashboard shows progress, recommended courses, and upcoming training activities.</p>
+      </div>
 
-      <div class="slider-viewport" style="overflow:hidden;">
-        <div class="slider" id="slider">
+      <!-- Cards slider -->
+      <div class="slider-viewport">
+        <div class="slider" id="cardSlider">
+          <article class="card">
+            <img class="card-icon" src="./image/training.svg" alt="Training"/>
+            <h3 class="card-title">Set goals for your employees</h3>
+            <p class="card-details">Sed vel sem id dui rutrum porta. Morbi nec sapien sed dolor.</p>
+          </article>
+
+          <article class="card">
+            <img class="card-icon" src="./image/Group.png" alt="Create courses"/>
+            <h3 class="card-title">Create your courses</h3>
+            <p class="card-details">Sed vel sem id dui rutrum porta. Morbi nec sapien sed dolor.</p>
+          </article>
+
+          <article class="card">
+            <img class="card-icon" src="./image/Growth.svg" alt="Measure growth"/>
+            <h3 class="card-title">Measure their growth</h3>
+            <p class="card-details">Sed vel sem id dui rutrum porta. Morbi nec sapien sed dolor.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="slider-dots" id="cardDots" aria-label="cards dots">
+        <button class="dot active" data-index="0" aria-label="slide 1"></button>
+        <button class="dot" data-index="1" aria-label="slide 2"></button>
+        <button class="dot" data-index="2" aria-label="slide 3"></button>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="section section--tight">
+      <a href="#get-started" class="btnRes"><b>Get started now!</b></a>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="section-head">
+        <h2>What other startups are talking about us</h2>
+        <p>Our developer-training app is helping teams unlock productivity and quality across projects.</p>
+      </div>
+
+      <div class="slider-viewport">
+        <div class="slider" id="testiSlider">
           <div class="slide">
+            <img src="./image/Profile.png" alt="Guille"/>
             <h3>"Guille"</h3>
             <h4>Jr. Frontend Developer</h4>
-            <p>"Morbi nec sapien sed dolor tempus. Vivamus non elit condimentum."</p>
+            <p>“Upskilling our team led to remarkable project outcomes.”</p>
           </div>
           <div class="slide">
-            <h3>"Guille"</h3>
-            <h4>Jr. Frontend Developer</h4>
-            <p>"Vivamus non elit condimentum ante finibus gravida eget dignissim."</p>
+            <img src="./image/Profile.png" alt="Lauren"/>
+            <h3>"Lauren"</h3>
+            <h4>Senior Developer, Innovate Labs</h4>
+            <p>“Unprecedented growth and efficiency—game changing.”</p>
           </div>
           <div class="slide">
-            <h3>"Guille"</h3>
-            <h4>Jr. Frontend Developer</h4>
-            <p>"Maecenas iaculis varius pulvinar. Morbi nec sapien sed dolor."</p>
+            <img src="./image/Profile.png" alt="Jake"/>
+            <h3>"Jake"</h3>
+            <h4>Founder, TechVista LTD</h4>
+            <p>“Huge boost in productivity and faster delivery times.”</p>
           </div>
         </div>
       </div>
 
-      <div class="slider-dots" id="slider-dots" aria-label="slider dots">
-        <div class="dot active" data-index="0" tabindex="0"></div>
-        <div class="dot" data-index="1" tabindex="0"></div>
-        <div class="dot" data-index="2" tabindex="0"></div>
+      <div class="slider-dots" id="testiDots" aria-label="testimonials dots">
+        <button class="dot active" data-index="0" aria-label="slide 1"></button>
+        <button class="dot" data-index="1" aria-label="slide 2"></button>
+        <button class="dot" data-index="2" aria-label="slide 3"></button>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section>
+    <!-- Final CTA -->
+    <section class="section final" id="contact">
       <h2>Have Questions? Get in touch with our experts!</h2>
-      <p>
-        Reach out now and discover how SkillBridge can revolutionize your HR training management.
-      </p>
-      <button class="btnRes-touch"><b>Get in touch</b></button>
+      <p>If you need details about <strong>SkillBridge</strong>, we’re here to help. Discover how we can streamline your training programs.</p>
+      <button class="btnRes-touch">Get in touch</button>
     </section>
   </div>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-column">
-        <img src="./image/Layer_1.svg" alt="SkillBridge Logo" />
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="./image/Layer_1.svg" alt="SkillBridge"/>
         <h2>SkillBridge</h2>
       </div>
 
-      <div class="footer-nav">
-        <h4><a href="#">How it Works</a></h4>
-        <h4><a href="#">The Team</a></h4>
-        <h4><a href="#">Contact Us</a></h4>
-      </div>
+      <nav class="footer-nav">
+        <a href="/how-it-works">How it Works</a>
+        <a href="/the-team">The Team</a>
+        <a href="/contact-us">Contact Us</a>
+      </nav>
 
-      <div class="footer-nav2">
-        <h4><a href="#">Create Account</a></h4>
-        <h4><a href="#">Sign In</a></h4>
-      </div>
+      <nav class="footer-nav">
+        <a href="/create-account">Create Account</a>
+        <a href="/sign-in">Sign In</a>
+      </nav>
 
-      <div class="address">
-        Langara College<br>
-        100 West 49th Ave<br>
-        Vancouver, BC<br>
+      <address class="address">
+        Langara College<br/>
+        100 West 49th Ave<br/>
+        Vancouver, BC<br/>
         Canada V5Y 2Z6
-      </div>
+      </address>
     </div>
   </footer>
 
